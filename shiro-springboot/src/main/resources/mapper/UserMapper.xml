@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 命名空间，作用是对sql进行分类化管理，理解sql隔离
+        注意：使用mapper代理方法，namespace用特殊重要作用
+    -->
+<mapper namespace="com.wenl.mapper.UserMapper">
+
+    <select id="queryUserByName" parameterType="String" resultType="User">
+        select * from mybatis.user where name =#{name}
+    </select>
+
+</mapper>
